@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dogamanzara243-hue.github.io/gezi-rotasi-topkapi-sarayi/sitemap.xml
+Sitemap: https://dogamanzara243-hue.github.io/gezi-rotasi-istanbul-topkapi-sarayi/sitemap.xml
