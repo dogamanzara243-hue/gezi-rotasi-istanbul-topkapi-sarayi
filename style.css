@@ -3,10 +3,6 @@
     --color-theme-dark: #78350f;
     --summary-gradient: linear-gradient(135deg, #b45309 0%, #451a03 100%);
 }
-.theme-sea { --color-theme: #0284c7; --color-theme-dark: #0369a1; --summary-gradient: linear-gradient(135deg, #0284c7 0%, #0369a1 100%); }
-.theme-history { --color-theme: #b45309; --color-theme-dark: #78350f; --summary-gradient: linear-gradient(135deg, #b45309 0%, #451a03 100%); }
-.theme-nature { --color-theme: #15803d; --color-theme-dark: #166534; --summary-gradient: linear-gradient(135deg, #15803d 0%, #14532d 100%); }
-.theme-museum { --color-theme: #7e22ce; --color-theme-dark: #6b21a8; --summary-gradient: linear-gradient(135deg, #7e22ce 0%, #581c87 100%); }
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background: #f1f5f9; }
 ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
