@@ -27,13 +27,16 @@ function renderMustSee() {
 function renderTransportation() {
     document.getElementById("transportation-methods").innerHTML = SPOT_DATA.transportation.methods.map(m => `<div class="flex items-start space-x-3"><div class="w-8 h-8 rounded-lg bg-amber-50 text-amber-800 flex items-center justify-center shrink-0 mt-0.5"><i class="${m.icon}"></i></div><div><strong class="text-slate-900">${m.title}:</strong><p class="text-sm mt-0.5">${m.detail}</p></div></div>`).join("");
     document.getElementById("transportation-tip").innerHTML = `<i class="fa-solid fa-lightbulb mr-2"></i><strong>İpucu:</strong> ${SPOT_DATA.transportation.tip}`;
-    document.getElementById("map-direction-btn").href = SPOT_DATA.transportation.mapUrl;
+    const mapBtn = document.getElementById("map-direction-btn");
+    mapBtn.href = SPOT_DATA.transportation.mapUrl;
+    mapBtn.target = "_blank";
+    mapBtn.rel = "noopener noreferrer";
 }
 function renderWhereToStay() {
-    document.getElementById("hotel-list").innerHTML = SPOT_DATA.whereToStay.map(h => `<div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 flex items-center justify-between space-x-4"><div class="space-y-1"><h3 class="font-bold text-slate-900">${h.name}</h3><p class="text-xs text-slate-500">${h.type} &bull; <span class="text-amber-600 font-semibold"><i class="fa-solid fa-star mr-1"></i>${h.rating}</span></p></div><a href="${h.link}" target="_blank" class="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm font-medium rounded-xl transition-colors shrink-0">İncele <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-xs"></i></a></div>`).join("");
+    document.getElementById("hotel-list").innerHTML = SPOT_DATA.whereToStay.map(h => `<div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 flex items-center justify-between space-x-4"><div class="space-y-1"><h3 class="font-bold text-slate-900">${h.name}</h3><p class="text-xs text-slate-500">${h.type} &bull; <span class="text-amber-600 font-semibold"><i class="fa-solid fa-star mr-1"></i>${h.rating}</span></p></div><a href="${h.link}" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm font-medium rounded-xl transition-colors shrink-0">İncele <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-xs"></i></a></div>`).join("");
 }
 function renderWhereToEat() {
-    document.getElementById("restaurant-list").innerHTML = SPOT_DATA.whereToEat.map(r => `<div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 flex items-center justify-between space-x-4"><div class="space-y-1"><h3 class="font-bold text-slate-900">${r.name}</h3><p class="text-xs text-slate-500">${r.cuisine} &bull; <span class="text-amber-600 font-semibold"><i class="fa-solid fa-star mr-1"></i>${r.rating}</span></p></div><a href="${r.link}" target="_blank" class="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm font-medium rounded-xl transition-colors shrink-0">Yol Tarifi <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-xs"></i></a></div>`).join("");
+    document.getElementById("restaurant-list").innerHTML = SPOT_DATA.whereToEat.map(r => `<div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 flex items-center justify-between space-x-4"><div class="space-y-1"><h3 class="font-bold text-slate-900">${r.name}</h3><p class="text-xs text-slate-500">${r.cuisine} &bull; <span class="text-amber-600 font-semibold"><i class="fa-solid fa-star mr-1"></i>${r.rating}</span></p></div><a href="${r.link}" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm font-medium rounded-xl transition-colors shrink-0">Yol Tarifi <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-xs"></i></a></div>`).join("");
 }
 function setupInteractions() {
     const favBtn = document.getElementById("favorite-btn");
